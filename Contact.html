@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mohammad Amin's webpage</title>
+        <link href="ok.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            var email, fname, lname, message;
+            function change(c)
+            {
+                switch(c)
+                {
+                    case "s":
+                    document.getElementById('content').innerHTML='<b> Software Group </b>';
+                    break;
+                    case "h" :
+                    document.getElementById('content').innerHTML='<b> Hardware Group </b>'; 
+                    break;
+                    case "i" :
+                    document.getElementById('content').innerHTML='<b> IT Group </b>';
+                    break;
+                }
+            }
+            function trust()
+            {
+                var sure = confirm("از ارسال پیام اطمینان دارید ؟");
+                if (sure)
+                {
+                alert("پیام شما با موفقیت ارسال شد");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <nav>
+            <ul>  
+                <li><a href="Home.html">معرفی</a></li>
+                 <li><a href="About.html">دستاورد ها و مهارت ها</a></li>
+                <li><a href="Contact.html">تماس با من</a></li>
+            </ul>
+        </nav>
+        <br/><br/><br/>
+        <p class="question">&nbsp;نظرتان را با من در میان بگذارید</p>
+        <form method="post" action="Contact_form.php" >
+            <p class="text">&nbsp;ایمیل: <input type="email" id="Email" name="email"></p>
+            <p class="text">&nbsp;نام <input type="text" id="First name" name="fname"></p>
+            <p class="text">&nbsp;نام خانوادگی <input type="text" id="Last name" name="lname"></p>
+            <p class="text">&nbsp;پیام  <input type="text" id="Message" name="message"></p>
+            <input type="submit" id="submit" value="ارسال" onclick="trust()" class="text">
+        </form>
+        <footer>
+            <ul class="footer">
+            <br>
+            <li style="float: left"><p>&nbsp; Created by Mohammad Amin Kiani ©</p></li>
+            <li><a href="https://stackoverflow.com/users/20742797/mohammad-amin-kiani"><img alt= "My stackoverflow" src="stackoverflow.png"/></a></li>
+            <li ><a href="https://github.com/kimoam03"><img alt= "My github" src="github.png"/></a></li>
+            <li ><a href="mailto:moaminkiani1@gmail.com"><img alt= "Send mail to me" src="mail.png"/></a></li>
+          </ul>
+      </footer>
+    </body>
+</html>
